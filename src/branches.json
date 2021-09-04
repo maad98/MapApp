@@ -1,0 +1,207 @@
+[
+    {
+        "name": "Canadian Mental Health Association Waterloo Wellington Dufferin",
+        "url": "https://cmhaww.ca/",
+        "lat": 43.538860,
+        "lng": -80.251850
+    },
+    {
+        "name": "Reach Out Centre for Kids (ROCK)",
+        "url": "https://rockonline.ca/",
+        "lat": 43.466540,
+        "lng": -79.683070
+    },
+    {
+        "name": "Peel Children’s Centre",
+        "url": "https://everymind.ca/",
+        "lat": 43.646720,
+        "lng": -79.703550
+    },
+    {
+        "name": "New Path Youth and Family Counselling Services of Simcoe County",
+        "url": "https://www.newpath.ca/",
+        "lat": 44.409640,
+        "lng": -79.688550
+    },
+
+    {
+        "name": "Lutherwood Children's Mental Health Centre",
+        "url": "https://www.lutherwood.ca/",
+        "lat": 43.499900,
+        "lng": -80.567100
+    },
+
+    {
+        "name": "Kinark Child and Family Services",
+        "url": "https://www.kinark.on.ca/",
+        "lat": 44.018070,
+        "lng": -79.449800
+    },
+
+        {
+            "name": "Kinark Child and Family Services",
+            "url": "https://www.kinark.on.ca/",
+            "lat": 43.893800,
+            "lng": -78.880270
+        },
+        {
+            "name": "Maltby Centre",
+            "url": "https://maltbycentre.ca/",
+            "lat": 44.258730,
+            "lng": -76.508640
+        },
+        {
+            "name": "Kinark Child and Family Services",
+            "url": "https://www.kinark.on.ca/",
+            "lat": 44.304880,
+            "lng": -78.338780
+        },
+        {
+            "name": "Children’s Mental Health Services",
+            "url": "https://www.cmhsonline.ca/",
+            "lat": 44.147850,
+            "lng": -77.406470
+        },
+        {
+            "name": "Children's Mental Health of Leeds and Grenville",
+            "url": "https://www.cmhlg.ca/",
+            "lat": 44.602930,
+            "lng": -75.709890
+        },
+        {
+            "name": "Youth Services Bureau of Ottawa",
+            "url": "https://www.ysb.ca/",
+            "lat": 45.426870,
+            "lng": -75.688650
+        },
+        {
+            "name": "Valoris for Children and Adults of Prescott-Russell",
+            "url": "https://valorispr.ca/en/",
+            "lat": 45.269380,
+            "lng": -75.313250
+        },
+        {
+            "name": "The Phoenix Centre for Children and Families",
+            "url": "https://phoenixctr.com/",
+            "lat": 45.472520,
+            "lng": -76.683080
+        },
+        {
+            "name": "The Phoenix Centre for Children and Families",
+            "url": "https://www.cornwallhospital.ca/",
+            "lat": 45.030060,
+            "lng": -74.717987
+        },
+        
+        {
+            "name": "Algoma Family Services",
+            "url": "https://algomafamilyservices.ca/",
+            "lat": 46.384020,
+            "lng": -82.644710
+        },
+        {
+            "name": "North Eastern Ontario Family and Children’s Services",
+            "url": "http://www.neofacs.org/",
+            "lat": 47.509230,
+            "lng": -79.673940
+        },
+        {
+            "name": "FIREFLY – Physical, Emotional, Developmental and Community Services",
+            "url": "http://www.fireflynw.ca/",
+            "lat": 49.762690,
+            "lng": -94.527590
+        },
+        {
+            "name": "Hands TheFamilyHelpNetwork.ca",
+            "url": "https://thefamilyhelpnetwork.ca/",
+            "lat": 46.305910,
+            "lng": -79.461010
+        },
+        {
+            "name": "Child and Family Centre",
+            "url": "http://www.casdsm.on.ca/",
+            "lat": 46.521830,
+            "lng": -80.979890
+        },
+        {
+            "name": "Children’s Centre Thunder Bay",
+            "url": "http://www.childrenscentre.ca/en",
+            "lat": 48.423430,
+            "lng": -89.232070
+        },
+
+        {
+            "name": "East Metro Youth Services",
+            "url": "https://stridestoronto.ca/",
+            "lat": 43.776620,
+            "lng": -79.232120
+        },
+
+
+        {
+            "name": "Woodview Mental Health and Autism Services",
+            "url": "https://woodview.ca/",
+            "lat": 43.168210,
+            "lng": -80.338460
+        },
+        {
+            "name": "Chatham-Kent Children's Services",
+            "url": "https://www.ckcs.on.ca/",
+            "lat": 42.400330,
+            "lng": -82.206870
+        },
+        {
+            "name": "Oxford-Elgin Child & Youth Centre",
+            "url": "https://wellkin.ca/",
+            "lat": 42.861530,
+            "lng": -80.729740
+        },
+        {
+            "name": "Hôtel-Dieu Grace Healthcare - Regional Children's Centre",
+            "url": "https://www.hdgh.org/",
+            "lat": 42.282900,
+            "lng": -83.063660
+        },
+        {
+            "name": "Keystone Child, Youth & Family Services",
+            "url": "https://www.keystonebrucegrey.org/",
+            "lat": 44.578240,
+            "lng": -80.948240
+        },
+        {
+            "name": "Haldimand Norfolk Resource, Education and Counselling Help (H-N REACH)",
+            "url": "http://www.hnreach.on.ca/",
+            "lat": 42.838790,
+            "lng": -80.313040
+        },
+        {
+            "name": "Lynwood Charlton Centre",
+            "url": "https://www.lynwoodcharlton.ca/",
+            "lat": 43.231810,
+            "lng": -79.913670
+        },
+        {
+            "name": "Huron Perth Centre for Children and Youth",
+            "url": "http://www.hpcentre.on.ca/",
+            "lat": 43.353070,
+            "lng": -80.995380
+        },
+        {
+            "name": "St. Clair Child & Youth Services",
+            "url": "https://www.stclairchild.ca/",
+            "lat": 42.995450,
+            "lng": -82.401180
+        },
+        {
+            "name": "Madame Vanier Children’s Services",
+            "url": "https://www.vanier.com/",
+            "lat": 42.978400,
+            "lng": -81.216800
+        },
+        {
+            "name": "Pathstone Mental Health",
+            "url": "https://pathstonementalhealth.ca/",
+            "lat": 43.154570,
+            "lng": -79.285840
+        }
+]
