@@ -13,6 +13,19 @@
   }
 }
 
+@media screen and (min-width: 601px) {
+  p.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  p.example {
+    font-size: 30px;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

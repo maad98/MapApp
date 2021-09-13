@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import "./index.css";
+import Text from "react-text";
 import {
   GoogleMap,
   useLoadScript,
@@ -63,6 +64,9 @@ export default function App() {
   if (!isLoaded) return "Loading Maps";
   return (
     <div>
+      <div>
+        <h1>Children Mental Health Facilities Map</h1>
+      </div>
       <Search panTo={panTo} />
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
@@ -90,15 +94,42 @@ export default function App() {
             }}
           >
             <div>
-              <h3>
-                <strong>{selected.name}</strong>
-              </h3>
-              <h3>
-                Website:{" "}
-                <a href={selected.url} target="_blank" rel="noreferrer">
-                  {selected.url}
-                </a>
-              </h3>
+              <p>
+                <strong>You have clicked on the </strong>
+                <strong
+                  style={{
+                    fontStyle: "italic",
+                    color: "green",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {selected.name}
+                </strong>{" "}
+                <strong>agency location.</strong>
+              </p>
+              <hr
+                style={{
+                  borderBottomColor: "black",
+                  borderBottomWidth: 1,
+                }}
+              />
+              <p>
+                <strong>Contact Information:</strong>
+              </p>
+              <p>
+                <strong>
+                  Website:
+                  <a href={selected.url} target="_blank" rel="noreferrer">
+                    {selected.url}
+                  </a>
+                </strong>
+              </p>
+              <p>
+                <strong>Phone number: </strong>
+                <strong style={{ fontWeight: "bold", color: "green" }}>
+                  {selected.phoneNumber}
+                </strong>
+              </p>
             </div>
           </InfoWindow>
         )}
