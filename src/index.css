@@ -23,8 +23,13 @@ h1 {
   padding: 0;
 }
 
+.Combobox {
+  align-self: center;
+}
+
 .search {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   top: 1rem;
   position: absolute;

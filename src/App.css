@@ -17,12 +17,53 @@
   p.example {
     font-size: 80px;
   }
+  .Combobox {
+    padding-top: 40rem;
+  }
+  .imgDiv {
+    width: 100%;
+    height: 100%;
+  }
+  .logo {
+    width: 75%;
+    height: 100%;
+    padding-left: 60%;
+  }
+
+  .initP {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: x-large;
+  }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
   p.example {
     font-size: 30px;
+  }
+  .Combobox {
+    padding-top: 38rem;
+    width: 70%;
+  }
+  .imgDiv {
+    width: 100%;
+    height: 80%;
+  }
+  .logo {
+    width: 120%;
+    height: 100%;
+    padding-left: 30%;
+  }
+  .search {
+    width: 80%;
+    padding-left: 11%;
+  }
+
+  .initP {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: large;
   }
 }
 
