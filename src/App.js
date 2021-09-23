@@ -60,7 +60,6 @@ export default function App() {
     mapRef.current = map;
   }, []);
 
-  console.log(logo);
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
@@ -93,10 +92,12 @@ export default function App() {
         </strong>
         <br />
         <br />
-        <p className="initP">
+        <div className="initP">
           • To find the nearest facility to you, enter your zipcode with the
-          following format: <strong style={{ color: "blue" }}>"XXX XXX"</strong>
-          .
+          following format:{" "}
+          <strong style={{ color: "blue" }}>"N2N N2N" </strong>
+          And hit the 'Enter' key on your keyboard OR select an address from the
+          suggestions listed.
           <hr
             style={{
               borderBottomColor: "skyblue",
@@ -105,7 +106,8 @@ export default function App() {
             }}
           />
           <br /> • Or, you can enter an address (could be your home address or
-          an address of your choice).
+          an address of your choice), do not forget to hit 'Enter' Or select one
+          of the options listed.
           <hr
             style={{
               borderBottomColor: "skyblue",
@@ -126,13 +128,15 @@ export default function App() {
           <br />• Click the{" "}
           <strong style={{ color: "red" }}>red markers</strong> on the map to
           view each facility's information.
-        </p>
-        <hr
-          style={{
-            borderBottomColor: "black",
-            borderBottomWidth: 1,
-          }}
-        />
+        </div>
+        <div>
+          <hr
+            style={{
+              borderBottomColor: "black",
+              borderBottomWidth: 1,
+            }}
+          />
+        </div>
       </div>
       <Search panTo={panTo} />
 
@@ -150,7 +154,6 @@ export default function App() {
             position={{ lat: branch.lat, lng: branch.lng }}
             onClick={() => {
               setSelected(branch);
-              console.log(branch);
             }}
           />
         ))}
@@ -175,12 +178,14 @@ export default function App() {
                 </strong>{" "}
                 <strong>agency location.</strong>
               </p>
-              <hr
-                style={{
-                  borderBottomColor: "black",
-                  borderBottomWidth: 1,
-                }}
-              />
+              <div>
+                <hr
+                  style={{
+                    borderBottomColor: "black",
+                    borderBottomWidth: 1,
+                  }}
+                />
+              </div>
               <p>
                 <strong>Contact Information:</strong>
               </p>
@@ -195,7 +200,9 @@ export default function App() {
               <p>
                 <strong>Phone number: </strong>
                 <strong style={{ fontWeight: "bold", color: "blue" }}>
-                  {selected.phoneNumber}
+                  <a href={`tel:${selected.phoneNumber}`}>
+                    {selected.phoneNumber}
+                  </a>
                 </strong>
               </p>
             </div>
@@ -239,6 +246,20 @@ function Search({ panTo }) {
           value={value}
           onChange={(e) => {
             setValue(e.target.value);
+          }}
+          onKeyDown={async (ev) => {
+            if (ev.key === "Enter") {
+              setValue(ev.target.value, false);
+              const address = ev.target.value;
+              clearSuggestions();
+              try {
+                const results = await getGeocode({ address });
+                const { lat, lng } = await getLatLng(results[0]);
+                panTo({ lat, lng });
+              } catch (err) {
+                console.log(err);
+              }
+            }
           }}
           disabled={!ready}
           placeholder="Enter an address"

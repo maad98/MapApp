@@ -34,6 +34,15 @@
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     font-size: x-large;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .mapStyle {
+    width: 80vw;
+    height: 90vh;
+    align-self: center;
+    margin-left: 10%;
   }
 }
 
@@ -43,7 +52,7 @@
     font-size: 30px;
   }
   .Combobox {
-    padding-top: 38rem;
+    padding-top: 45rem;
     width: 70%;
   }
   .imgDiv {
@@ -53,6 +62,7 @@
   .logo {
     width: 120%;
     height: 100%;
+    padding-top: 15%;
     padding-left: 30%;
   }
   .search {
@@ -64,6 +74,14 @@
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     font-size: large;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mapStyle {
+    width: 100vw;
+    height: 100vh;
+    align-self: center;
   }
 }
 

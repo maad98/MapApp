@@ -55,3 +55,8 @@ h1 {
   width: 30px;
   cursor: pointer;
 }
+
+.gm-style-iw.gm-style-iw-c {
+  min-width: 250px !important;
+  overflow-wrap: break-word;
+}
