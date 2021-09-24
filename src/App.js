@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.css";
 import "./index.css";
-import Text from "react-text";
+//import Text from "react-text";
+import logo from "./imgs/logo.webp";
+
 import {
   GoogleMap,
   useLoadScript,
@@ -27,8 +29,10 @@ require("dotenv").config();
 const libraries = ["places"];
 
 const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
+  width: "80vw",
+  height: "90vh",
+  alignSelf: "center",
+  marginLeft: "10%",
 };
 
 const center = {
@@ -64,10 +68,78 @@ export default function App() {
   if (!isLoaded) return "Loading Maps";
   return (
     <div>
-      <div>
-        <h1>Children Mental Health Facilities Map</h1>
+      <div
+        className="imgDiv"
+        style={{
+          width: "50%",
+          height: "100%",
+        }}
+      >
+        <img src={logo} alt="logo" className="logo"></img>
+      </div>
+
+      <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <strong
+          style={{
+            fontFamily:
+              "Trebuchet MS, Lucida Sans, Lucida Sans Unicode, Lucida Grande, Arial,sans-serif",
+            fontSize: "x-large",
+          }}
+        >
+          {" "}
+          This map will help you find the nearst children mental health facility
+          to you.
+        </strong>
+        <br />
+        <br />
+        <div className="initP">
+          • To find the nearest facility to you, enter your zipcode with the
+          following format:{" "}
+          <strong style={{ color: "blue" }}>"N2N N2N" </strong>
+          And hit the 'Enter' key on your keyboard OR select an address from the
+          suggestions listed.
+          <hr
+            style={{
+              borderBottomColor: "skyblue",
+              borderBottomWidth: 0.2,
+              width: "20%",
+            }}
+          />
+          <br /> • Or, you can enter an address (could be your home address or
+          an address of your choice), do not forget to hit 'Enter' Or select one
+          of the options listed.
+          <hr
+            style={{
+              borderBottomColor: "skyblue",
+              borderBottomWidth: 0.2,
+              width: "20%",
+            }}
+          />
+          <br />• You can also search by City or/and Province (For example:
+          <strong style={{ color: "blue" }}> London, ON </strong> or{" "}
+          <strong style={{ color: "blue" }}> Ontario</strong>).
+          <hr
+            style={{
+              borderBottomColor: "skyblue",
+              borderBottomWidth: 0.2,
+              width: "20%",
+            }}
+          />
+          <br />• Click the{" "}
+          <strong style={{ color: "red" }}>red markers</strong> on the map to
+          view each facility's information.
+        </div>
+        <div>
+          <hr
+            style={{
+              borderBottomColor: "black",
+              borderBottomWidth: 1,
+            }}
+          />
+        </div>
       </div>
       <Search panTo={panTo} />
+
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={7}
@@ -82,7 +154,6 @@ export default function App() {
             position={{ lat: branch.lat, lng: branch.lng }}
             onClick={() => {
               setSelected(branch);
-              console.log(branch);
             }}
           />
         ))}
@@ -99,7 +170,7 @@ export default function App() {
                 <strong
                   style={{
                     fontStyle: "italic",
-                    color: "green",
+                    color: "blue",
                     fontWeight: "bold",
                   }}
                 >
@@ -107,12 +178,14 @@ export default function App() {
                 </strong>{" "}
                 <strong>agency location.</strong>
               </p>
-              <hr
-                style={{
-                  borderBottomColor: "black",
-                  borderBottomWidth: 1,
-                }}
-              />
+              <div>
+                <hr
+                  style={{
+                    borderBottomColor: "black",
+                    borderBottomWidth: 1,
+                  }}
+                />
+              </div>
               <p>
                 <strong>Contact Information:</strong>
               </p>
@@ -126,8 +199,10 @@ export default function App() {
               </p>
               <p>
                 <strong>Phone number: </strong>
-                <strong style={{ fontWeight: "bold", color: "green" }}>
-                  {selected.phoneNumber}
+                <strong style={{ fontWeight: "bold", color: "blue" }}>
+                  <a href={`tel:${selected.phoneNumber}`}>
+                    {selected.phoneNumber}
+                  </a>
                 </strong>
               </p>
             </div>
@@ -154,6 +229,7 @@ function Search({ panTo }) {
   return (
     <div className="search">
       <Combobox
+        className="Combobox"
         onSelect={async (address) => {
           setValue(address, false);
           clearSuggestions();
@@ -170,6 +246,20 @@ function Search({ panTo }) {
           value={value}
           onChange={(e) => {
             setValue(e.target.value);
+          }}
+          onKeyDown={async (ev) => {
+            if (ev.key === "Enter") {
+              setValue(ev.target.value, false);
+              const address = ev.target.value;
+              clearSuggestions();
+              try {
+                const results = await getGeocode({ address });
+                const { lat, lng } = await getLatLng(results[0]);
+                panTo({ lat, lng });
+              } catch (err) {
+                console.log(err);
+              }
+            }
           }}
           disabled={!ready}
           placeholder="Enter an address"
