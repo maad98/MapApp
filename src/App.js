@@ -171,6 +171,7 @@ function Search({ panTo }) {
       >
         <ComboboxInput
           value={value}
+          className="comboBoxInput"
           onChange={(e) => {
             setValue(e.target.value);
           }}
@@ -190,6 +191,7 @@ function Search({ panTo }) {
           }}
           disabled={!ready}
           placeholder="Enter an address"
+          style={{ fontSize: "medium" }}
         />
         <ComboboxPopover>
           <ComboboxList>
@@ -198,6 +200,7 @@ function Search({ panTo }) {
                 <ComboboxOption
                   key={Math.random().toString(36).substr(2, 9)}
                   value={description}
+                  style={{ fontSize: "small" }}
                 />
               ))}
           </ComboboxList>
