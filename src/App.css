@@ -19,6 +19,11 @@
   }
   .Combobox {
     padding-top: 2rem;
+    width: 30%;
+  }
+  .search {
+    width: 25%;
+    padding-left: 28%;
   }
   .comboBoxInput {
     font-size: small;

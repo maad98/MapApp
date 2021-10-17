@@ -191,7 +191,7 @@ function Search({ panTo }) {
           }}
           disabled={!ready}
           placeholder="Enter an address"
-          style={{ fontSize: "medium" }}
+          style={{ fontSize: "small" }}
         />
         <ComboboxPopover>
           <ComboboxList>
