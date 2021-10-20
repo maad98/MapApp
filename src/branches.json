@@ -4,28 +4,33 @@
         "url": "https://cmhaww.ca/",
         "lat": 43.538860,
         "lng": -80.251850,
-        "phoneNumber": "844-437-3247"
+        "phoneNumber": "844-437-3247",
+        "city":"Guelph"
     },
     {
         "name": "Reach Out Centre for Kids (ROCK)",
         "url": "https://rockonline.ca/",
         "lat": 43.466540,
         "lng": -79.683070,
-        "phoneNumber": "289-266-0036"
+        "phoneNumber": "289-266-0036",
+        "city":"Halton"
+
     },
     {
         "name": "Peel Children’s Centre",
         "url": "https://everymind.ca/",
         "lat": 43.646720,
         "lng": -79.703550,
-        "phoneNumber": "905-795-3500"
+        "phoneNumber": "905-795-3500",
+        "city":"Mississauga"
     },
     {
         "name": "New Path Youth and Family Counselling Services of Simcoe County",
         "url": "https://www.newpath.ca/",
         "lat": 44.409640,
         "lng": -79.688550,
-        "phoneNumber": "705-725-7656"
+        "phoneNumber": "705-725-7656",
+        "city": "Barrie"
     },
 
     {
@@ -33,15 +38,17 @@
         "url": "https://www.lutherwood.ca/",
         "lat": 43.499900,
         "lng": -80.567100,
-        "phoneNumber": "519-884-1470"
+        "phoneNumber": "519-884-1470",
+        "city": "Lutherwood"
     },
 
     {
         "name": "Kinark Child and Family Services",
         "url": "https://www.kinark.on.ca/",
-        "lat": 44.018070,
-        "lng": -79.449800,
-        "phoneNumber": "888-454-6275"
+        "lat": 43.837810,
+        "lng": -79.329940,
+        "phoneNumber": "888-454-6275",
+        "city": "Markham || York"
     },
 
         {
@@ -49,63 +56,73 @@
             "url": "https://www.kinark.on.ca/",
             "lat": 43.893800,
             "lng": -78.880270,
-            "phoneNumber": "888-454-6275"
+            "phoneNumber": "888-454-6275",
+            "city": "Oshawa || Durham"
         },
         {
             "name": "Maltby Centre",
             "url": "https://maltbycentre.ca/",
             "lat": 44.258730,
             "lng": -76.508640,
-            "phoneNumber": "844-855-8340"
+            "phoneNumber": "844-855-8340",
+            "city": "Kingston"
         },
         {
             "name": "Kinark Child and Family Services",
             "url": "https://www.kinark.on.ca/",
             "lat": 44.304880,
             "lng": -78.338780,
-            "phoneNumber": "888-454-6275"
+            "phoneNumber": "888-454-6275",
+            "city": "Peterborough"
         },
         {
             "name": "Children’s Mental Health Services",
             "url": "https://www.cmhsonline.ca/",
             "lat": 44.147850,
             "lng": -77.406470,
-            "phoneNumber": "613-966-3100"
+            "phoneNumber": "613-966-3100",
+            "city": "Belleville"
         },
         {
             "name": "Children's Mental Health of Leeds and Grenville",
             "url": "https://www.cmhlg.ca/",
             "lat": 44.602930,
             "lng": -75.709890,
-            "phoneNumber": "800-809-2494"
+            "phoneNumber": "800-809-2494",
+            "city": "Brockville"
         },
         {
             "name": "Youth Services Bureau of Ottawa",
             "url": "https://www.ysb.ca/",
             "lat": 45.426870,
             "lng": -75.688650,
-            "phoneNumber": "613-729-1000"
+            "phoneNumber": "613-729-1000",
+            "city": "Ottawa"
         },
         {
             "name": "Valoris for Children and Adults of Prescott-Russell",
             "url": "https://valorispr.ca/en/",
             "lat": 45.269380,
             "lng": -75.313250,
-            "phoneNumber": "800-675-6168"
+            "phoneNumber": "800-675-6168",
+            "city": "Embrun || Russell"
         },
         {
             "name": "The Phoenix Centre for Children and Families",
             "url": "https://phoenixctr.com/",
             "lat": 45.472520,
             "lng": -76.683080,
-            "phoneNumber": "613-735-2374"
+            "phoneNumber": "613-735-2374",
+            "city":"Renfrew"
+
         },
         {
             "name": "Cornwall Community Hospital",
             "url": "https://www.cornwallhospital.ca/",
             "lat": 45.030060,
             "lng": -74.717987,
-            "phoneNumber": "613-938-4240"
+            "phoneNumber": "613-938-4240",
+            "city":"Cornwall"
         },
         
         {
@@ -113,42 +130,48 @@
             "url": "https://algomafamilyservices.ca/",
             "lat": 46.384020,
             "lng": -82.644710,
-            "phoneNumber": "800-461-2237"
+            "phoneNumber": "800-461-2237",
+            "city":"Elliot Lake"
         },
         {
             "name": "North Eastern Ontario Family and Children’s Services",
             "url": "http://www.neofacs.org/",
             "lat": 47.509230,
             "lng": -79.673940,
-            "phoneNumber": "705-360-7100"
+            "phoneNumber": "705-360-7100",
+            "city":"Temiskaming"
         },
         {
             "name": "FIREFLY – Physical, Emotional, Developmental and Community Services",
             "url": "http://www.fireflynw.ca/",
             "lat": 49.762690,
             "lng": -94.527590,
-            "phoneNumber": "800-465-7203"
+            "phoneNumber": "800-465-7203",
+            "city":"Kenora"
         },
         {
             "name": "Hands TheFamilyHelpNetwork.ca",
             "url": "https://thefamilyhelpnetwork.ca/",
             "lat": 46.305910,
             "lng": -79.461010,
-            "phoneNumber": "705-476-2293"
+            "phoneNumber": "705-476-2293",
+            "city":"North Bay"
         },
         {
             "name": "Child and Family Centre",
             "url": "http://www.casdsm.on.ca/",
             "lat": 46.521830,
             "lng": -80.979890,
-            "phoneNumber": "705-566-3113"
+            "phoneNumber": "705-566-3113",
+            "city":"Sudbury"
         },
         {
             "name": "Children’s Centre Thunder Bay",
             "url": "http://www.childrenscentre.ca/en",
             "lat": 48.423430,
             "lng": -89.232070,
-            "phoneNumber": "807-343-5000"
+            "phoneNumber": "807-343-5000",
+            "city": "Thunder Bay"
         },
 
         {
@@ -156,7 +179,8 @@
             "url": "https://stridestoronto.ca/",
             "lat": 43.776620,
             "lng": -79.232120,
-            "phoneNumber": "416-438-3697"
+            "phoneNumber": "416-438-3697",
+            "city":"Scarborough"
         },
 
 
@@ -165,49 +189,56 @@
             "url": "https://woodview.ca/",
             "lat": 43.168210,
             "lng": -80.338460,
-            "phoneNumber": "905-689-4727"
+            "phoneNumber": "905-689-4727",
+            "city": "Brantford"
         },
         {
             "name": "Chatham-Kent Children's Services",
             "url": "https://www.ckcs.on.ca/",
             "lat": 42.400330,
             "lng": -82.206870,
-            "phoneNumber": "519-352-0440"
+            "phoneNumber": "519-352-0440",
+            "city": "Chatham"
         },
         {
             "name": "Oxford-Elgin Child & Youth Centre",
             "url": "https://wellkin.ca/",
             "lat": 42.861530,
             "lng": -80.729740,
-            "phoneNumber": "519-539-0463"
+            "phoneNumber": "519-539-0463",
+            "city":"Tilsonburg"
         },
         {
             "name": "Hôtel-Dieu Grace Healthcare - Regional Children's Centre",
             "url": "https://www.hdgh.org/",
             "lat": 42.282900,
             "lng": -83.063660,
-            "phoneNumber": "519-257-5111"
+            "phoneNumber": "519-257-5111",
+            "city":"Windsor"
         },
         {
             "name": "Keystone Child, Youth & Family Services",
             "url": "https://www.keystonebrucegrey.org/",
             "lat": 44.578240,
             "lng": -80.948240,
-            "phoneNumber": "519-371-4773"
+            "phoneNumber": "519-371-4773",
+            "city":"Owen Sound || Grey || Bruce"
         },
         {
             "name": "Haldimand Norfolk Resource, Education and Counselling Help (H-N REACH)",
             "url": "http://www.hnreach.on.ca/",
             "lat": 42.838790,
             "lng": -80.313040,
-            "phoneNumber": "519-587-2441"
+            "phoneNumber": "519-587-2441",
+            "city":"Simcoe || Haldimand"
         },
         {
             "name": "Lynwood Charlton Centre",
             "url": "https://www.lynwoodcharlton.ca/",
             "lat": 43.231810,
             "lng": -79.913670,
-            "phoneNumber": "905-389-1361"
+            "phoneNumber": "905-389-1361",
+            "city":"Hamilton"
             
         },
         {
@@ -215,27 +246,31 @@
             "url": "http://www.hpcentre.on.ca/",
             "lat": 43.353070,
             "lng": -80.995380,
-            "phoneNumber": "519-273-3373"
+            "phoneNumber": "519-273-3373",
+            "city":"Stratford || Huron Perth"
         },
         {
             "name": "St. Clair Child & Youth Services",
             "url": "https://www.stclairchild.ca/",
             "lat": 42.995450,
             "lng": -82.401180,
-            "phoneNumber": "519-337-3701"
+            "phoneNumber": "519-337-3701",
+            "city":"Lambton"
         },
         {
             "name": "Madame Vanier Children’s Services",
             "url": "https://www.vanier.com/",
             "lat": 42.978400,
             "lng": -81.216800,
-            "phoneNumber": "519-433-3101"
+            "phoneNumber": "519-433-3101",
+            "city":"London || Middlesex"
         },
         {
             "name": "Pathstone Mental Health",
             "url": "https://pathstonementalhealth.ca/",
             "lat": 43.154570,
             "lng": -79.285840,
-            "phoneNumber": "905-688-6850"
+            "phoneNumber": "905-688-6850",
+            "city":"St. Catharines || Niagara"
         }
 ]

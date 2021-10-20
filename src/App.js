@@ -63,7 +63,7 @@ export default function App() {
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";
   return (
-    <div>
+    <div className="mapDiv">
       <Search panTo={panTo} />
 
       <GoogleMap
