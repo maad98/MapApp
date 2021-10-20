@@ -49,11 +49,12 @@ export default function App() {
   });
 
   const [selected, setSelected] = React.useState(null);
-
+  
   const mapRef = React.useRef();
 
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
+    
   }, []);
 
   const panTo = React.useCallback(({ lat, lng }) => {
@@ -161,7 +162,17 @@ function Search({ panTo }) {
           clearSuggestions();
           try {
             const results = await getGeocode({ address });
-            console.log(results);
+            
+            branches.forEach((br) => {
+             const allCities = br.city.split(/\s*\|\|\s*/);
+              allCities.forEach((city) => {
+                if(results[0].formatted_address.toLowerCase().includes(city.toLowerCase()))
+                {
+                  console.log(br);
+                }
+              })
+            
+            })
             const { lat, lng } = await getLatLng(results[0]);
             panTo({ lat, lng });
           } catch (err) {
