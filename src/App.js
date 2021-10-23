@@ -49,7 +49,7 @@ export default function App() {
   });
 
   const [selected, setSelected] = React.useState(null);
-  
+  const [searchedCities, setSearchedCities] = React.useState(null);
   const mapRef = React.useRef();
 
   const onMapLoad = React.useCallback((map) => {
@@ -135,88 +135,93 @@ export default function App() {
             </div>
           </InfoWindow>
         )}
+        {/* {searchedCities &&  searchedCities.map((el, idx) => {
+         return <div key={idx} className={idx + "_branch"} style={{zIndex: 99, backgroundColor: "red", position: "absolute"}}>{el.city}</div>
+        })} */}
       </GoogleMap>
     </div>
   );
-}
-
-function Search({ panTo }) {
-  const {
-    ready,
-    value,
-    suggestions: { status, data },
-    setValue,
-    clearSuggestions,
-  } = usePlacesAutocomplete({
-    requestOptions: {
-      location: { lat: () => 51.2538, lng: () => -85.3232 },
-      radius: 200 * 1000,
-    },
-  });
-  return (
-    <div className="search">
-      <Combobox
-        className="Combobox"
-        onSelect={async (address) => {
-          setValue(address, false);
-          clearSuggestions();
-          try {
-            const results = await getGeocode({ address });
-            
-            branches.forEach((br) => {
-             const allCities = br.city.split(/\s*\|\|\s*/);
-              allCities.forEach((city) => {
-                if(results[0].formatted_address.toLowerCase().includes(city.toLowerCase()))
-                {
-                  console.log(br);
-                }
+  function Search({ panTo }) {
+    const {
+      ready,
+      value,
+      suggestions: { status, data },
+      setValue,
+      clearSuggestions,
+    } = usePlacesAutocomplete({
+      requestOptions: {
+        location: { lat: () => 51.2538, lng: () => -85.3232 },
+        radius: 200 * 1000,
+      },
+    });
+    return (
+      <div className="search">
+        <Combobox
+          className="Combobox"
+          onSelect={async (address) => {
+            setValue(address, false);
+            clearSuggestions();
+            try {
+              const results = await getGeocode({ address });
+              var filteredBranches = [];
+              branches.forEach((br) => {
+               const allCities = br.city.split(/\s*\|\|\s*/);
+                allCities.forEach((city) => {
+                  if(results[0].formatted_address.toLowerCase().includes(city.toLowerCase()))
+                  {
+                    filteredBranches.push(br);
+                  }
+                })
+              
               })
-            
-            })
-            const { lat, lng } = await getLatLng(results[0]);
-            panTo({ lat, lng });
-          } catch (err) {
-            console.log(err);
-          }
-        }}
-      >
-        <ComboboxInput
-          value={value}
-          className="comboBoxInput"
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-          onKeyDown={async (ev) => {
-            if (ev.key === "Enter") {
-              setValue(ev.target.value, false);
-              const address = ev.target.value;
-              clearSuggestions();
-              try {
-                const results = await getGeocode({ address });
-                const { lat, lng } = await getLatLng(results[0]);
-                panTo({ lat, lng });
-              } catch (err) {
-                console.log(err);
-              }
+              setSearchedCities(filteredBranches);
+              const { lat, lng } = await getLatLng(results[0]);
+              panTo({ lat, lng });
+            } catch (err) {
+              console.log(err);
             }
           }}
-          disabled={!ready}
-          placeholder="Enter an address"
-          style={{ fontSize: "small" }}
-        />
-        <ComboboxPopover>
-          <ComboboxList>
-            {status === "OK" &&
-              data.map(({ description }) => (
-                <ComboboxOption
-                  key={Math.random().toString(36).substr(2, 9)}
-                  value={description}
-                  style={{ fontSize: "small" }}
-                />
-              ))}
-          </ComboboxList>
-        </ComboboxPopover>
-      </Combobox>
-    </div>
-  );
+        >
+          <ComboboxInput
+            value={value}
+            className="comboBoxInput"
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            onKeyDown={async (ev) => {
+              if (ev.key === "Enter") {
+                setValue(ev.target.value, false);
+                const address = ev.target.value;
+                clearSuggestions();
+                try {
+                  const results = await getGeocode({ address });
+                  const { lat, lng } = await getLatLng(results[0]);
+                  panTo({ lat, lng });
+                } catch (err) {
+                  console.log(err);
+                }
+              }
+            }}
+            disabled={!ready}
+            placeholder="Enter an address"
+            style={{ fontSize: "small" }}
+          />
+          <ComboboxPopover>
+            <ComboboxList>
+              {status === "OK" &&
+                data.map(({ description }) => (
+                  <ComboboxOption
+                    key={Math.random().toString(36).substr(2, 9)}
+                    value={description}
+                    style={{ fontSize: "small" }}
+                  />
+                ))}
+            </ComboboxList>
+          </ComboboxPopover>
+        </Combobox>
+      </div>
+    );
+  }
+  
 }
+
